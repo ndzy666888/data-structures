@@ -8,6 +8,7 @@ import PageHome from './PageHome';
 import PageStack from './PageStack';
 import PageQueue from './PageQueue';
 import PageDeque from './PageDeque';
+import PageLinkedList from './PageLinkedList';
 
 const routers = [
   {
@@ -18,6 +19,7 @@ const routers = [
   { path: '/stack', name: 'stack', component: PageStack },
   { path: '/queue', name: 'queue', component: PageQueue },
   { path: '/deque', name: 'deque', component: PageDeque },
+  { path: '/linkedList', name: 'linkedList', component: PageLinkedList },
 ];
 
 ReactDOM.render(

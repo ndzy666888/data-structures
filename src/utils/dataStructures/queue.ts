@@ -1,3 +1,5 @@
+import { FAILED } from '../index';
+
 /**
  * @description 队
  */
@@ -35,7 +37,7 @@ export default class Queue<T> {
    */
   dequeue() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
@@ -48,7 +50,7 @@ export default class Queue<T> {
    */
   peek() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     return this.items[this.lowestCount];
   }

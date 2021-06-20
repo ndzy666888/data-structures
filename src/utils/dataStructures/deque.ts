@@ -1,3 +1,5 @@
+import { FAILED } from '../index';
+
 /**
  * @description 双端队列
  */
@@ -54,7 +56,7 @@ export default class Deque<T> {
    */
   removeFront() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
@@ -67,7 +69,7 @@ export default class Deque<T> {
    */
   removeBack() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     this.count--;
     const result = this.items[this.count];
@@ -80,7 +82,7 @@ export default class Deque<T> {
    */
   peekFront() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     return this.items[this.lowestCount];
   }
@@ -90,7 +92,7 @@ export default class Deque<T> {
    */
   peekBack() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     return this.items[this.count - 1];
   }

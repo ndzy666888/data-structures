@@ -1,3 +1,5 @@
+import { FAILED } from '../index';
+
 /**
  * @description 栈
  */
@@ -30,7 +32,7 @@ class Stack<T> {
    */
   pop() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     this.count--;
     const result = this.items[this.count];
@@ -43,7 +45,7 @@ class Stack<T> {
    */
   peek() {
     if (this.isEmpty()) {
-      return undefined;
+      return FAILED;
     }
     return this.items[this.count - 1];
   }
